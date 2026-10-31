@@ -36,8 +36,8 @@ periodic-kmeans/
 ## Numbers you'll find (do not trust this README over the notebooks)
 
 - silhouette k-selection: **k\* = 5** (mean silhouette 0.359 over 3 seeds)
-- ARI vs 18 families @ k\*: **0.016 ± 0.000** · k=18 companion: 0.025
-- block battery (s/p/d/f): 0.143 / 0.180 / 0.243 for k = 5/6/7 · H-out sensitivity Δ −0.002
+- ARI vs 18 families @ k\*: **0.016 ± 0.000** · k=18 companion (validation-only): **0.024**
+- block battery (s/p/d/f): 0.143 / 0.180 / 0.243 for k = 5/6/7 · H-out sensitivity **Δ +0.0016**
 - raw-units exhibit: atomic_weight owns **78.7%** of the raw pairwise-distance mass
 
 ## Conventions

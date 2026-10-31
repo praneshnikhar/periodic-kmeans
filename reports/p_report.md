@@ -19,7 +19,7 @@ would recover the families.
 
 - `mendeleev` package → 118 elements; committed snapshot so grading runs **offline**.
 - Ground truth for *validation only*: `group_id` (18 families) exists for 90 elements; the 28
-  f-block/transactinides carry no family label and are reported as such.
+  f-block rows carry no family label and are reported as such.
 - **Anti-peek rule, locked by tests and a notebook assertion:** chemistry-truth columns
   (`group_id`, `period`, `block`) never enter features; all ARI values are computed *after*
   clustering, never used for tuning.
@@ -43,10 +43,10 @@ would recover the families.
 | instrument | value | reading |
 |---|---|---|
 | **ARI@k\*=5** vs 18 families (90 labeled, 3 seeds) | **0.016 ± 0.000** | family **rediscovery FAILS** — chance-level |
-| ARI@k=18 companion (validation-only) | 0.025 | forcing 18 partitions of size-space ≠ 18 families |
+| ARI@k=18 companion (validation-only) | 0.024 | forcing 18 partitions of size-space ≠ 18 families |
 | ARI vs **block** classes (s/p/d/f), k=5→7 | **0.143 → 0.180 → 0.243** | weak, *persistent* coarse alignment |
-| H sensitivity (H excluded from labeled set) | Δ −0.002 | verdict does not hinge on H's formal group-1 membership |
-| unlabeled 28 elements (f-block + transactinide) | land 13+15 in the two heavy-metal clusters | physically sensible; honestly reported |
+| H sensitivity (H excluded from labeled set) | Δ +0.0016 | verdict does not hinge on H's formal group-1 membership |
+| unlabeled 28 f-block rows (Ce–Lu, Th–Lr) | land in two continent clusters: C0 (13, actinides) and C4 (15, lanthanoids + Th) | physically sensible; honestly reported |
 
 ## 5. Findings
 

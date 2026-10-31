@@ -11,13 +11,13 @@
 - [x] Task 1 scaffold + data snapshot + offline tests (4/4 passing)
 - [x] Task 2 — notebook `01_data.ipynb` (fetch, coverage, heterogeneity, missingness-as-physics, leakage guard)
 - [x] Task 3 — `src/study.py` + notebook `02_kmeans_study.ipynb` (raw-units failure → standardization → elbow/silhouette → k*=5 → centroids)
-- [x] Task 4 — notebook `03_validation_report.ipynb` (ARI@k* 0.016±0.000 FAIL-honest; k=18 companion 0.025; block battery 0.14–0.24; H-sensitivity Δ−0.002; unlabeled-28 13+15) + `reports/p_report.md` + README + private GitHub repo
+- [x] Task 4 — notebook `03_validation_report.ipynb` (ARI@k* 0.016±0.000 FAIL-honest; k=18 companion 0.024; block battery 0.14–0.24; H-sensitivity Δ+0.0016; unlabeled-28 → C0/C4) + `reports/p_report.md` + README + private GitHub repo
 - [ ] Final: whole-branch review (fresh reviewer) → merge/finish
 
 ## Data facts (recon + tests, 2026-10-31)
 - mendeleev `fetch_table("elements")`: 118 elements; snapshot committed at `data/elements.csv` (offline proof).
 - Physical feature coverage (rows non-null): weight 118, density 118, radius_rahm 96, radius 90, EN-pauling 85, e-affinity 77.
-- Ground truth for validation only: `group_id` present for 90 elements (18 families); 28 f-block/transactinides unlabeled.
+- Ground truth for validation only: `group_id` present for 90 elements (18 families); 28 f-block rows (Ce–Lu, Th–Lr) unlabeled.
 - Chemistry nuance the tests taught us: noble gases lack EN **except Xe (2.6)** — it forms compounds. He/Ar have *negative* electron affinity (resist electron capture) — big visual for notebook 01.
 
 ## Conventions
