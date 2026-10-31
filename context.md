@@ -9,9 +9,10 @@
 - [x] Design doc approved (`docs/superpowers/specs/2026-10-31-periodic-kmeans-design.md`)
 - [x] Implementation plan (`docs/superpowers/plans/2026-10-31-periodic-kmeans.md`)
 - [x] Task 1 scaffold + data snapshot + offline tests (4/4 passing)
-- [ ] Task 2 — notebook `01_data.ipynb` (fetch, coverage, heterogeneity, missingness-as-physics, leakage guard)
-- [ ] Task 3 — `src/study.py` + notebook `02_kmeans_study.ipynb` (raw-units failure → standardization → elbow/silhouette → k* → centroids)
-- [ ] Task 4 — notebook `03_validation_report.ipynb` (ARI at k*, k=18 validation-only companion, H-sensitivity, unlabeled-28 table) + `reports/p_report.md` + README + private GitHub repo
+- [x] Task 2 — notebook `01_data.ipynb` (fetch, coverage, heterogeneity, missingness-as-physics, leakage guard)
+- [x] Task 3 — `src/study.py` + notebook `02_kmeans_study.ipynb` (raw-units failure → standardization → elbow/silhouette → k*=5 → centroids)
+- [x] Task 4 — notebook `03_validation_report.ipynb` (ARI@k* 0.016±0.000 FAIL-honest; k=18 companion 0.025; block battery 0.14–0.24; H-sensitivity Δ−0.002; unlabeled-28 13+15) + `reports/p_report.md` + README + private GitHub repo
+- [ ] Final: whole-branch review (fresh reviewer) → merge/finish
 
 ## Data facts (recon + tests, 2026-10-31)
 - mendeleev `fetch_table("elements")`: 118 elements; snapshot committed at `data/elements.csv` (offline proof).
