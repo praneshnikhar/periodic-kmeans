@@ -1,4 +1,4 @@
-# periodic-kmeans 🔬🧲
+# periodic-kmeans 
 
 **"K-Means rediscovers the periodic table?"** — ML-subject mini project (Session 11 deep-dive).
 
