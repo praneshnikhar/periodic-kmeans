@@ -12,6 +12,7 @@
 - [x] Task 2 — notebook `01_data.ipynb` (fetch, coverage, heterogeneity, missingness-as-physics, leakage guard)
 - [x] Task 3 — `src/study.py` + notebook `02_kmeans_study.ipynb` (raw-units failure → standardization → elbow/silhouette → k*=5 → centroids)
 - [x] Task 4 — notebook `03_validation_report.ipynb` (ARI@k* 0.016±0.000 FAIL-honest; k=18 companion 0.024; block battery 0.14–0.24; H-sensitivity Δ+0.0016; unlabeled-28 → C0/C4) + `reports/p_report.md` + README + private GitHub repo
+- [x] UI — `app/` offline explorer (property space, periodic table, cluster panel, validation) + `scripts/ui_data.py` + 4 payload tests; report updated
 - [ ] Final: whole-branch review (fresh reviewer) → merge/finish
 
 ## Data facts (recon + tests, 2026-10-31)
@@ -39,11 +40,14 @@ periodic-kmeans/
 ├── context.md            # this file — update every session
 ├── data/elements.csv     # committed snapshot (offline grading)
 ├── src/                  # data.py, study.py (Task 3)
-├── tests/                # test_data.py (4 passing)
+├── tests/                # 16 tests (data, study, docs consistency, UI payload)
 ├── notebooks/            # 01_data, 02_kmeans_study, 03_validation_report
-├── reports/              # figures/, tables/, p_report.md
+├── app/                  # offline explorer (index.html, app.js, style.css, data.js)
+├── scripts/ui_data.py    # builds the explorer payload from the fitted study
+├── reports/              # figures/, tables/, p_report.md, project_report.{md,pdf,docx}
 └── docs/superpowers/     # design spec + implementation plan
 ```
 
 ## Session log
 - **2026-10-31** — brainstormed 13 ideas across the 15 topics; picked "K-Means rediscovers the periodic table" (builder-checked design: grader reads notebooks; k=18 companion sanctioned as validation-only; hydrogen sensitivity flagged call). Scaffold: venv+deps, snapshot committed after mendeleev fetch, 4 data tests passing (one test corrected real chemistry: Xe's EN exists). Next: Task 2 (notebook 01).
+- **2026-11-01** — added the offline explorer (`app/`), the `scripts/ui_data.py` exporter, and four payload tests (16 total). Wrote the project report (`reports/project_report.md`) and rendered PDF + DOCX; the report now includes the interface section, the permutation check, and the verification notes.

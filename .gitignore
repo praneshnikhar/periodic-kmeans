@@ -6,3 +6,6 @@ __pycache__/
 # NOTE: data/elements.csv is INTENTIONALLY committed (offline grading snapshot)
 
 .superpowers/
+.gstack/
+
+.playwright-mcp/
